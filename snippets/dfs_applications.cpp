@@ -1,7 +1,7 @@
 /*
  * Graph DFS Applications.
  *
- * Reference : http://www.comp.nus.edu.sg/~stevenha/myteaching/competitive_programming/ch2.zip
+ * Reference : http://www.comp.nus.edu.sg/~stevenha/myteaching/competitive_programming/ch4.zip
  */
 
 #include <cstdio>
