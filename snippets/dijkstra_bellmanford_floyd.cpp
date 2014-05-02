@@ -129,4 +129,6 @@ int main () {
     input_adj_matrix();
     // Floyd-Warshall Test
     test_floyd_warshall();
+
+    return 0;
 }

@@ -59,4 +59,6 @@ int main() {
 
     ft.adjust(5, 2);
     assert(ft.rsq(1, 10) == 13);
+
+    return 0;
 }

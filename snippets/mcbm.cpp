@@ -55,4 +55,6 @@ int main() {
 
     // Max Cardinality Bipartite Matching
     test_mcbm();
+
+    return 0;
 }

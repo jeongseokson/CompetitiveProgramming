@@ -134,4 +134,6 @@ int main() {
 
     // Prim Algorithm
     test_prim();
+
+    return 0;
 }

@@ -59,4 +59,6 @@ int main() {
 
     // set
     test_set();
+
+    return 0;
 }

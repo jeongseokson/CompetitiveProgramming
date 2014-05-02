@@ -213,4 +213,6 @@ int main() {
 
     // Strongly Connected Components
     test_scc();
+
+    return 0;
 }

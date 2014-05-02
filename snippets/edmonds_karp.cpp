@@ -129,4 +129,6 @@ int main() {
 
     input_adj_list();
     test_edmond_karp_with_adj_list();
+
+    return 0;
 }

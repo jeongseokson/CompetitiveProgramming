@@ -95,4 +95,6 @@ int main() {
     assert(st.rmq(0, 0) == 0);
     assert(st.rmq(0, 1) == 1);
     assert(st.rmq(0, 6) == 5);
+
+    return 0;
 }

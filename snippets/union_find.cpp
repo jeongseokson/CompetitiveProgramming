@@ -75,4 +75,6 @@ int main() {
 
     UF.unionSet(0, 3);
     assert(UF.numDisjoinSets() == 1);
+
+    return 0;
 }

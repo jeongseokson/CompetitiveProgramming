@@ -48,4 +48,6 @@ int main() {
     ii result = floydCycleFinding(L);
     // 4 9 8 1 0 5 4 9 8 1 0 5 ...
     assert(result.second == 6);
+
+    return 0;
 }

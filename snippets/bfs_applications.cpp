@@ -83,4 +83,6 @@ int main() {
 
     // Bipartite Check
     test_bipartite_check();
+
+    return 0;
 }

@@ -173,4 +173,6 @@ int main() {
     assert(numDiv(50) == 6);
     assert(sumDiv(50) == 93);
     assert(EulerPhi(50) == 20);
+
+    return 0;
 }
