@@ -103,16 +103,20 @@ void solve() {
 
     for (int i = 2; i < n; i++) {
         if ((sa[i - 1] - len_t1) * (sa[i] - len_t1) < 0)
-            max_lcs_len = max(0, lcp[i]);
+            max_lcs_len = max(max_lcs_len, lcp[i]);
     }
 
     if (max_lcs_len == 0)
         printf("No common sequence.\n");
     else {
+        char *prev = NULL;
         for (int i = 2; i < n; i++) {
             if (max_lcs_len == lcp[i] &&
                     (sa[i - 1] - len_t1) * (sa[i] - len_t1) < 0) {
-                printf("%.*s\n", max_lcs_len, t + sa[i]);
+                if (prev == NULL || strncmp(prev, t + sa[i], max_lcs_len)) {
+                    printf("%.*s\n", max_lcs_len, t + sa[i]);
+                    prev = t + sa[i];
+                }
             }
         }
     }
