@@ -1,7 +1,9 @@
 /*
  * Bit manipulation techniques.
  *
- * Reference : http://www.comp.nus.edu.sg/~stevenha/myteaching/competitive_programming/ch2.zip
+ * Reference :
+ *   http://www.comp.nus.edu.sg/~stevenha/myteaching/competitive_programming/ch2.zip
+ *   http://stackoverflow.com/questions/109023/how-to-count-the-number-of-set-bits-in-a-32-bit-integer
  */
 
 #include <cmath>
@@ -23,6 +25,13 @@
 #define turnOnLastConsecutiveZeroes(S) ((S) | ((S) - 1))
 
 using namespace std;
+
+unsigned int numberOfSetBits(unsigned int i)
+{
+     i = i - ((i >> 1) & 0x55555555);
+     i = (i & 0x33333333) + ((i >> 2) & 0x33333333);
+     return (((i + (i >> 4)) & 0x0F0F0F0F) * 0x01010101) >> 24;
+}
 
 int main() {
     int S = 34; // 100010
@@ -62,6 +71,8 @@ int main() {
     assert(turnOffLastConsecutiveBits(43) == 40); // 101011 -> 101000
 
     assert(turnOnLastConsecutiveZeroes(40) == 47); // 101000 -> 101111
+
+    assert(numberOfSetBits(100) == 3); // 1100100
 
     return 0;
 }
